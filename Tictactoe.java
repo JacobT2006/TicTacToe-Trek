@@ -4,7 +4,7 @@ public class Tictactoe
     public static void main(String[] agrs)
     {
         // initalize array
-        String[] anArray = new String[]{"1","2","3","4","5","6","7","8","9"};
+        String[] anArray = new String[]{"0","1","2","3","4","5","6","7","8"};
 
         int     playerOneCnt    = 0,
                 playerTwoCnt    = 0;
@@ -50,43 +50,15 @@ public class Tictactoe
                 }
                 // ------------ X ----------------
                 
-                if (playerOne.equals(anArray[0]))
+                for (int i = 0; i < anArray.length; i++)
                 {
-                    anArray[0] = "X";
+                    if (playerOne.equals(anArray[i]))
+                    {
+                        anArray[i] = "X";
+                        break;
+                    }
                 }
-                else if (playerOne.equals(anArray[1]))
-                {
-                    anArray[1] = "X";
-                }
-                else if (playerOne.equals(anArray[2]))
-                {
-                    anArray[2] = "X";
-                }
-                else if (playerOne.equals(anArray[3]))
-                {
-                    anArray[3] = "X";
-                }
-                else if (playerOne.equals(anArray[4]))
-                {
-                    anArray[4] = "X";
-                }
-                else if (playerOne.equals(anArray[5]))
-                {
-                    anArray[5] = "X";
-                }
-                else if (playerOne.equals(anArray[6]))
-                {
-                    anArray[6] = "X";
-                }
-                else if (playerOne.equals(anArray[7]))
-                {
-                    anArray[7] = "X";
-                }
-                else if (playerOne.equals(anArray[8]))
-                {
-                    anArray[8] = "X";
-                }
-                    
+
                 //playeronecnt increase and clear
                 playerOneCnt += 1;
                 System.out.print("\033[H\033[2J");
@@ -103,41 +75,13 @@ public class Tictactoe
                     playerTwo = scan.next();
                 }
                 // ---------- O ------------
-                if (playerTwo.equals(anArray[0]))
+                for (int i = 0; i < anArray.length; i++)
                 {
-                    anArray[0] = "O";
-                }
-                else if (playerTwo.equals(anArray[1]))
-                {
-                    anArray[1] = "O";
-                }
-                else if (playerTwo.equals(anArray[2]))
-                {
-                    anArray[2] = "O";
-                }
-                else if (playerTwo.equals(anArray[3]))
-                {
-                    anArray[3] = "O";
-                }
-                else if (playerTwo.equals(anArray[4]))
-                {
-                    anArray[4] = "O";
-                }
-                else if (playerTwo.equals(anArray[5]))
-                {
-                    anArray[5] = "O";
-                }
-                else if (playerTwo.equals(anArray[6]))
-                {
-                    anArray[6] = "O";
-                }
-                else if (playerTwo.equals(anArray[7]))
-                {
-                    anArray[7] = "O";
-                }
-                else if (playerTwo.equals(anArray[8]))
-                {
-                    anArray[8] = "O";
+                    if (playerTwo.equals(anArray[i]))
+                    {
+                        anArray[i] = "O";
+                        break;
+                    }
                 }
 
                 //playertwocnt increase and clear
@@ -146,13 +90,13 @@ public class Tictactoe
             }
         }
     }
-    public static void method()
+    static void method()
     {
         System.out.println("\n\tGame Over Player One Win");
         System.out.println("\t        Congrats\n");
 
     }
-    public static void method1()
+    static void method1()
     {
         System.out.println("\n\tGame Over Player two Win");
         System.out.println("\t        Congrats\n");
