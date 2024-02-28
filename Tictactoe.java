@@ -90,12 +90,14 @@ public class Tictactoe
             }
         }
     }
+    // On Player One win 
     static void method()
     {
         System.out.println("\n\tGame Over Player One Win");
         System.out.println("\t        Congrats\n");
 
     }
+    // On Player Two win
     static void method1()
     {
         System.out.println("\n\tGame Over Player two Win");
